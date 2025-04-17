@@ -1,102 +1,87 @@
+// pages/index.js
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 export default function Home() {
-  const [showScroll, setShowScroll] = useState(false);
-
   useEffect(() => {
-    AOS.init({ duration: 1200, once: true });
-
-    const handleScroll = () => {
-      setShowScroll(window.scrollY > 300);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    AOS.init({ duration: 1000 });
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const players = [
     { name: "CNT Petey", image: "/players/petey.jpg" },
     { name: "CNT Zerox", image: "/players/zerox.jpg" },
     { name: "CNT Loki", image: "/players/loki.jpg" },
-    { name: "CNT Alpha", image: "/players/alpha.jpg" },
+    { name: "CNT Ares", image: "/players/ares.jpg" },
+    { name: "CNT Vex", image: "/players/vex.jpg" },
     { name: "CNT Nova", image: "/players/nova.jpg" },
-    { name: "CNT Blaze", image: "/players/blaze.jpg" },
-    { name: "CNT Reaper", image: "/players/reaper.jpg" },
-    { name: "CNT Shadow", image: "/players/shadow.jpg" },
-    { name: "CNT Frost", image: "/players/frost.jpg" },
+    { name: "CNT Raze", image: "/players/raze.jpg" },
+    { name: "CNT Ghost", image: "/players/ghost.jpg" },
+    { name: "CNT Titan", image: "/players/titan.jpg" },
   ];
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col relative overflow-hidden"
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-start"
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
-      {/* HERO SECTION */}
-      <div className="flex items-center justify-center text-center px-4 py-20 min-h-screen">
-        <div data-aos="fade-down">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-            WELCOME TO
-          </h1>
-          <h2 className="text-4xl md:text-6xl font-bold tracking-wide mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-            CONTRAST E-SPORTS
-          </h2>
-
-          {/* SOCIAL ICONS */}
-          <div className="flex justify-center space-x-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <a href="https://discord.gg/XKtD9gPJpU" target="_blank" rel="noopener noreferrer">
-              <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
-            </a>
-            <a href="https://www.youtube.com/@ContrastEsports" target="_blank" rel="noopener noreferrer">
-              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
-            </a>
-            <a href="https://x.com/CNTEsportsTM" target="_blank" rel="noopener noreferrer">
-              <img src="/x.svg" alt="X" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
-            </a>
-          </div>
+      <div className="flex flex-col items-center justify-center text-center px-4 pt-24" data-aos="fade-down">
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+          WELCOME TO
+        </h1>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-wide mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+          CONTRAST E-SPORTS
+        </h2>
+        <div className="flex justify-center space-x-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://discord.gg/XKtD9gPJpU" target="_blank" rel="noopener noreferrer">
+            <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
+          </a>
+          <a href="https://www.youtube.com/@ContrastEsports" target="_blank" rel="noopener noreferrer">
+            <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
+          </a>
+          <a href="https://x.com/CNTEsportsTM" target="_blank" rel="noopener noreferrer">
+            <img src="/x.svg" alt="X" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
+          </a>
+          <Link href="/settings">
+            <img src="/settings.svg" alt="Settings" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:rotate-90 hover:scale-110" />
+          </Link>
         </div>
       </div>
 
-      {/* COMBINED SECTIONS */}
-      <section className="py-12 px-6 bg-black bg-opacity-80" data-aos="fade-up">
-        <h3 className="text-white text-4xl font-bold text-center mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+      <section className="py-20 px-6 bg-black bg-opacity-70" data-aos="fade-up">
+        <h3 className="text-white text-4xl font-bold text-center mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           ABOUT CONTRAST
         </h3>
-        <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed mb-12" data-aos="fade-in" data-aos-delay="100">
+        <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed">
           Contrast E-Sports is a competitive gaming organization, built around excellence, skill and determination.
         </p>
+      </section>
 
-        <h3 className="text-white text-4xl font-bold text-center mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" data-aos="fade-up" data-aos-delay="200">
+      <section className="py-20 px-6 bg-black bg-opacity-80" data-aos="fade-up">
+        <h3 className="text-white text-4xl font-bold text-center mb-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           MEET THE ROSTER
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {players.map((player, index) => (
             <div
               key={index}
-              className="text-center transform transition duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] hover:scale-105 hover:-translate-y-1 group"
-              data-aos="zoom-in-up"
-              data-aos-delay={index * 100}
+              className="text-center transform transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+              data-aos="zoom-in" data-aos-delay={index * 100}
             >
-              <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white group-hover:shadow-[0_0_30px_rgba(255,255,255,0.8)] transition-all duration-500 ease-in-out">
-                <img
-                  src={player.image}
-                  alt={player.name}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 ease-in-out"
-                />
-              </div>
-              <p className="text-white text-xl font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group-hover:text-white transition-colors duration-500">
-                {player.name}
-              </p>
+              <img
+                src={player.image}
+                alt={player.name}
+                className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+              />
+              <p className="text-white text-xl font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">{player.name}</p>
             </div>
           ))}
         </div>
+      </section>
 
-        <h3 className="text-white text-4xl font-bold text-center mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" data-aos="fade-up">
+      <section className="py-20 px-6 bg-black bg-opacity-70 text-center" data-aos="fade-up">
+        <h3 className="text-white text-4xl font-bold mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           JOIN OUR COMMUNITY
         </h3>
         <iframe
@@ -107,25 +92,73 @@ export default function Home() {
           frameBorder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
           className="rounded-xl shadow-xl mx-auto max-w-3xl"
-          data-aos="fade-up"
-          data-aos-delay="200"
         ></iframe>
       </section>
 
-      {/* SCROLL TO TOP BUTTON */}
-      {showScroll && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 bg-white text-black font-bold p-3 rounded-full shadow-lg hover:scale-110 hover:shadow-[0_0_20px_rgba(255,255,255,0.8)] transition-all duration-300"
-        >
-          ↑
-        </button>
-      )}
-
-      {/* FOOTER */}
       <footer className="bg-black bg-opacity-70 text-white text-center py-4 text-sm">
         © {new Date().getFullYear()} Contrast E-Sports. All rights reserved.
       </footer>
     </main>
+  );
+}
+
+// pages/settings.jsx
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+const settings = [
+  { name: "CNT Petey", image: "/players/petey.jpg", sens: "DPI: 800 | Sensitivity: 0.35 | ADS: 0.65" },
+  { name: "CNT Zerox", image: "/players/zerox.jpg", sens: "DPI: 400 | Sensitivity: 0.6 | ADS: 0.9" },
+  { name: "CNT Loki", image: "/players/loki.jpg", sens: "DPI: 1600 | Sensitivity: 0.25 | ADS: 0.5" },
+  { name: "CNT Ares", image: "/players/ares.jpg", sens: "DPI: 1200 | Sensitivity: 0.4 | ADS: 0.6" },
+  { name: "CNT Vex", image: "/players/vex.jpg", sens: "DPI: 1000 | Sensitivity: 0.45 | ADS: 0.8" },
+  { name: "CNT Nova", image: "/players/nova.jpg", sens: "DPI: 800 | Sensitivity: 0.5 | ADS: 1.0" },
+  { name: "CNT Raze", image: "/players/raze.jpg", sens: "DPI: 600 | Sensitivity: 0.7 | ADS: 0.9" },
+  { name: "CNT Ghost", image: "/players/ghost.jpg", sens: "DPI: 800 | Sensitivity: 0.33 | ADS: 0.7" },
+  { name: "CNT Titan", image: "/players/titan.jpg", sens: "DPI: 1200 | Sensitivity: 0.5 | ADS: 0.8" },
+];
+
+export default function SettingsPage() {
+  const [hovered, setHovered] = useState(null);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-black text-white px-6 pt-24 relative">
+      <h1 className="text-4xl font-bold text-center mb-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">Player Settings</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        {settings.map((player, index) => (
+          <div
+            key={index}
+            onMouseEnter={() => setHovered(index)}
+            onMouseLeave={() => setHovered(null)}
+            className="text-center transform transition-transform duration-300 hover:scale-105 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]"
+            data-aos="zoom-in" data-aos-delay={index * 100}
+          >
+            <img
+              src={player.image}
+              alt={player.name}
+              className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-white drop-shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+            />
+            <p className="text-xl font-medium drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">{player.name}</p>
+            {hovered === index && (
+              <div className="mt-4 p-4 bg-white bg-opacity-10 rounded-lg text-sm transition-all duration-300">
+                {player.sens}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Scroll to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-6 right-6 p-3 bg-white bg-opacity-20 hover:bg-opacity-40 text-white rounded-full shadow-md transition duration-300"
+      >
+        ↑
+      </button>
+    </div>
   );
 }
