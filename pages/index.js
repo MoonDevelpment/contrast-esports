@@ -14,18 +14,37 @@ export default function Home() {
     >
       <div className="flex-grow flex items-center justify-center text-center px-4">
         <div data-aos="fade-up">
-          <h1 className="text-white text-5xl md:text-7xl font-extrabold mb-4">WELCOME TO</h1>
-          <h2 className="text-[#00FFFF] text-4xl md:text-6xl font-bold tracking-wide mb-6">CONTRAST E-SPORTS</h2>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+            WELCOME TO
+          </h1>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-wide mb-6 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+            CONTRAST E-SPORTS
+          </h2>
 
           <div className="flex justify-center space-x-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/twitter.svg" alt="Twitter" className="w-8 h-8 hover:scale-110 transition" />
+            {/* Discord */}
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/discord.svg"
+                alt="Discord"
+                className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110"
+              />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="/instagram.svg" alt="Instagram" className="w-8 h-8 hover:scale-110 transition" />
-            </a>
+            {/* YouTube */}
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 hover:scale-110 transition" />
+              <img
+                src="/youtube.svg"
+                alt="YouTube"
+                className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110"
+              />
+            </a>
+            {/* X / Twitter */}
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/x.svg"
+                alt="X"
+                className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110"
+              />
             </a>
           </div>
         </div>
