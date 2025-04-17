@@ -47,8 +47,8 @@ export default function Home() {
       <div className="h-[100vh]"></div>
 
       {/* ABOUT SECTION */}
-      <section className="py-20 px-6 bg-black bg-opacity-70" data-aos="fade-up">
-        <h3 className="text-white text-4xl font-bold text-center mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+      <section className="py-12 px-6 bg-black bg-opacity-70" data-aos="fade-up"> {/* Reduced py-20 to py-12 */}
+        <h3 className="text-white text-4xl font-bold text-center mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"> {/* Reduced mb-6 to mb-4 */}
           ABOUT CONTRAST
         </h3>
         <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed">
@@ -57,8 +57,8 @@ export default function Home() {
       </section>
 
       {/* ROSTER SECTION */}
-      <section className="py-20 px-6 bg-black bg-opacity-80" data-aos="fade-up">
-        <h3 className="text-white text-4xl font-bold text-center mb-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+      <section className="py-12 px-6 bg-black bg-opacity-80" data-aos="fade-up"> {/* Reduced py-20 to py-12 */}
+        <h3 className="text-white text-4xl font-bold text-center mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"> {/* Reduced mb-12 to mb-8 */}
           MEET THE ROSTER
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
