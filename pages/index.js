@@ -11,15 +11,21 @@ export default function Home() {
     { name: "CNT Petey", image: "/players/petey.jpg" },
     { name: "CNT Zerox", image: "/players/zerox.jpg" },
     { name: "CNT Loki", image: "/players/loki.jpg" },
+    { name: "CNT Alpha", image: "/players/alpha.jpg" },
+    { name: "CNT Nova", image: "/players/nova.jpg" },
+    { name: "CNT Blaze", image: "/players/blaze.jpg" },
+    { name: "CNT Reaper", image: "/players/reaper.jpg" },
+    { name: "CNT Shadow", image: "/players/shadow.jpg" },
+    { name: "CNT Frost", image: "/players/frost.jpg" },
   ];
 
   return (
     <main
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-between"
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex flex-col"
       style={{ backgroundImage: "url('/background.jpg')" }}
     >
       {/* HERO SECTION */}
-      <div className="flex-grow flex items-center justify-center text-center px-4">
+      <div className="flex items-center justify-center text-center px-4 py-12">
         <div data-aos="fade-up">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
             WELCOME TO
@@ -31,37 +37,33 @@ export default function Home() {
           {/* SOCIAL BUTTONS */}
           <div className="flex justify-center space-x-6 mt-4" data-aos="fade-up" data-aos-delay="300">
             <a href="https://discord.gg/XKtD9gPJpU" target="_blank" rel="noopener noreferrer">
-              <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
+              <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
             </a>
             <a href="https://www.youtube.com/@ContrastEsports" target="_blank" rel="noopener noreferrer">
-              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
+              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
             </a>
             <a href="https://x.com/CNTEsportsTM" target="_blank" rel="noopener noreferrer">
-              <img src="/x.svg" alt="X" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
+              <img src="/x.svg" alt="X" className="w-8 h-8 filter invert brightness-200 drop-shadow-[0_0_12px_white] transition-transform duration-300 hover:scale-110" />
             </a>
           </div>
         </div>
       </div>
 
-      {/* SCROLL SPACER */}
-      <div className="h-[100vh]"></div>
-
-      {/* ABOUT SECTION */}
-      <section className="py-12 px-6 bg-black bg-opacity-70" data-aos="fade-up"> {/* Reduced py-20 to py-12 */}
-        <h3 className="text-white text-4xl font-bold text-center mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"> {/* Reduced mb-6 to mb-4 */}
+      {/* COMBINED INFO SECTION */}
+      <section className="py-12 px-6 bg-black bg-opacity-80" data-aos="fade-up">
+        {/* ABOUT */}
+        <h3 className="text-white text-4xl font-bold text-center mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           ABOUT CONTRAST
         </h3>
-        <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed">
+        <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed mb-12">
           Contrast E-Sports is a competitive gaming organization, built around excellence, skill and determination.
         </p>
-      </section>
 
-      {/* ROSTER SECTION */}
-      <section className="py-12 px-6 bg-black bg-opacity-80" data-aos="fade-up"> {/* Reduced py-20 to py-12 */}
-        <h3 className="text-white text-4xl font-bold text-center mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]"> {/* Reduced mb-12 to mb-8 */}
+        {/* ROSTER */}
+        <h3 className="text-white text-4xl font-bold text-center mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           MEET THE ROSTER
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto mb-12">
           {players.map((player, index) => (
             <div key={index} className="text-center" data-aos="zoom-in" data-aos-delay={index * 100}>
               <img
@@ -73,11 +75,9 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
 
-      {/* DISCORD INVITE */}
-      <section className="py-20 px-6 bg-black bg-opacity-70 text-center" data-aos="fade-up">
-        <h3 className="text-white text-4xl font-bold mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+        {/* DISCORD EMBED */}
+        <h3 className="text-white text-4xl font-bold text-center mb-6 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
           JOIN OUR COMMUNITY
         </h3>
         <iframe
