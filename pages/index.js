@@ -8,10 +8,9 @@ export default function Home() {
   }, []);
 
   const players = [
-    { name: "Solwey", image: "/players/solwey.jpg" },
-    { name: "Nova", image: "/players/nova.jpg" },
-    { name: "Zenix", image: "/players/zenix.jpg" },
-    // Add more here
+    { name: "CNT Petey", image: "/players/petey.jpg" },
+    { name: "CNT Zerox", image: "/players/zerox.jpg" },
+    { name: "CNT Loki", image: "/players/loki.jpg" },
   ];
 
   return (
@@ -31,18 +30,21 @@ export default function Home() {
 
           {/* SOCIAL BUTTONS */}
           <div className="flex justify-center space-x-6 mt-4" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-              <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110" />
+            <a href="https://discord.gg/XKtD9gPJpU" target="_blank" rel="noopener noreferrer">
+              <img src="/discord.svg" alt="Discord" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110" />
+            <a href="https://www.youtube.com/@ContrastEsports" target="_blank" rel="noopener noreferrer">
+              <img src="/youtube.svg" alt="YouTube" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/x.svg" alt="X" className="w-8 h-8 filter brightness-150 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-transform duration-300 hover:scale-110" />
+            <a href="https://x.com/CNTEsportsTM" target="_blank" rel="noopener noreferrer">
+              <img src="/x.svg" alt="X" className="w-8 h-8 filter brightness-200 drop-shadow-[0_0_10px_white] transition-transform duration-300 hover:scale-110" />
             </a>
           </div>
         </div>
       </div>
+
+      {/* SCROLL SPACER */}
+      <div className="h-[100vh]"></div>
 
       {/* ABOUT SECTION */}
       <section className="py-20 px-6 bg-black bg-opacity-70" data-aos="fade-up">
@@ -50,7 +52,7 @@ export default function Home() {
           ABOUT CONTRAST
         </h3>
         <p className="text-white max-w-2xl mx-auto text-center text-lg leading-relaxed">
-          Contrast E-Sports is a competitive gaming organization built around excellence, creativity, and style. We represent top talent across games, and we’re here to dominate.
+          Contrast E-Sports is a competitive gaming organization, built around excellence, skill and determination.
         </p>
       </section>
 
