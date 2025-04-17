@@ -81,7 +81,7 @@ export default function Home() {
           JOIN OUR COMMUNITY
         </h3>
         <iframe
-          src="https://discord.com/widget?id=YOUR_SERVER_ID&theme=dark"
+          src="https://discord.com/widget?id=1362090850892517528&theme=dark"
           width="100%"
           height="400"
           allowTransparency="true"
