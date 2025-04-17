@@ -108,15 +108,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const settings = [
-  { name: "CNT Petey", image: "/players/petey.jpg", sens: "DPI: 800 | Sensitivity: 0.35 | ADS: 0.65" },
-  { name: "CNT Zerox", image: "/players/zerox.jpg", sens: "DPI: 400 | Sensitivity: 0.6 | ADS: 0.9" },
-  { name: "CNT Loki", image: "/players/loki.jpg", sens: "DPI: 1600 | Sensitivity: 0.25 | ADS: 0.5" },
-  { name: "CNT Ares", image: "/players/ares.jpg", sens: "DPI: 1200 | Sensitivity: 0.4 | ADS: 0.6" },
-  { name: "CNT Vex", image: "/players/vex.jpg", sens: "DPI: 1000 | Sensitivity: 0.45 | ADS: 0.8" },
-  { name: "CNT Nova", image: "/players/nova.jpg", sens: "DPI: 800 | Sensitivity: 0.5 | ADS: 1.0" },
-  { name: "CNT Raze", image: "/players/raze.jpg", sens: "DPI: 600 | Sensitivity: 0.7 | ADS: 0.9" },
-  { name: "CNT Ghost", image: "/players/ghost.jpg", sens: "DPI: 800 | Sensitivity: 0.33 | ADS: 0.7" },
-  { name: "CNT Titan", image: "/players/titan.jpg", sens: "DPI: 1200 | Sensitivity: 0.5 | ADS: 0.8" },
+  { name: "", image: "", sens: "DPI: 800 | Sensitivity: 0.35 | ADS: 0.65" },
+  { name: "CNT VezYT", image: "/players/vez.jpg", sens: "DPI: 400 | Sensitivity: 0.6 | ADS: 0.9" },
+  { name: "", image: "", sens: "DPI: 1600 | Sensitivity: 0.25 | ADS: 0.5" },
+  { name: "CNT Petey", image: "/players/petey.jpg", sens: "DPI: 1200 | Sensitivity: 0.4 | ADS: 0.6" },
+  { name: "CNT Zerox", image: "/players/zerox.jpg", sens: "DPI: 1000 | Sensitivity: 0.45 | ADS: 0.8" },
+  { name: "CNT Loki", image: "/players/loki.jpg", sens: "DPI: 800 | Sensitivity: 0.5 | ADS: 1.0" },
+  { name: "CNT Shadow", image: "/players/shadow.jpg", sens: "DPI: 600 | Sensitivity: 0.7 | ADS: 0.9" },
+  { name: "CNT Tinowitch", image: "/players/tin.jpg", sens: "DPI: 800 | Sensitivity: 0.33 | ADS: 0.7" },
+  { name: "CNT Resparr", image: "/players/resp.jpg", sens: "DPI: 1200 | Sensitivity: 0.5 | ADS: 0.8" },
 ];
 
 export default function SettingsPage() {
